@@ -22,7 +22,7 @@ type ExportedKey = {
   value: unknown
 }
 
-function normalizeDb(value: unknown, fallback = 0) {
+function normalizeDb(value: unknown, _fallback = 0) {
   const db = Number(value)
   if (!Number.isInteger(db) || db < 0 || db > 15) {
     throw new Error('REDIS_DB 需为 0–15 的整数')
